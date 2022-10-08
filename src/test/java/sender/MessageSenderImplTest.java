@@ -26,20 +26,17 @@ class MessageSenderImplTest {
     @Test
     void sendUsa() {
         String ipAddress = String.valueOf("96.45.35.12");
-        if (ipAddress != null && !ipAddress.isEmpty()) {
-            Location location = geoService.byIp(ipAddress);
-            System.out.printf("Отправлено сообщение:  %s", localizationService.locale(location.getCountry()));
-        }
+        Location location = geoService.byIp(ipAddress);
+        System.out.printf("Отправлено сообщение:  %s", localizationService.locale(location.getCountry()));
     }
+
 
     @Test
     void sendRus() {
         String ipAddress = String.valueOf("172.31.20.1");
-        if (ipAddress != null && !ipAddress.isEmpty()) {
-            Location location = geoService.byIp(ipAddress);
-            System.out.printf("Отправлено сообщение: %s", localizationService.locale(location.getCountry()));
-
-        }
+        Location location = geoService.byIp(ipAddress);
+        System.out.printf("Отправлено сообщение: %s", localizationService.locale(location.getCountry()));
 
     }
+
 }

@@ -15,22 +15,22 @@ class LocalizationServiceImplTest {
 
     @BeforeEach
     void setUp() {
-        localizationService=new LocalizationServiceImpl();
+        localizationService = new LocalizationServiceImpl();
     }
 
     @Test
     void localeRus() {
-        String expected=localizationService.locale(Country.RUSSIA);
-        String actual="Добро пожаловать";
-        Assertions.assertEquals(expected,actual);
+        String expected = localizationService.locale(Country.RUSSIA);
+        String actual = "Добро пожаловать";
+        Assertions.assertEquals(expected, actual);
 
     }
 
     @Test
     void localeEng() {
-        String expected=localizationService.locale(Country.USA);
-        String actual="Welcome";
-        Assertions.assertEquals(expected,actual);
+        String expected = localizationService.locale(Country.USA);
+        String actual = "Welcome";
+        Assertions.assertEquals(expected, actual);
 
     }
 }
